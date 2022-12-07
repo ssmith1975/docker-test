@@ -6,6 +6,8 @@ app.use(morgan('combined'));
 
 
 app.get('/', (req, res) => {
+  var test = process.env.MY_KEY || 'no key'
+  console.log('MY_KEY: ', test)
   res.sendFile(__dirname + '/index.html')
 });
 
